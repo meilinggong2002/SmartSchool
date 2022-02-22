@@ -37,19 +37,9 @@
 		<view class="demo-title">效果图</view>
 
 		<view class="meet-list-box">
-			<!--上下图 Begin-->
-			<view wx:if="{{mode=='upimg'}}" class="item shadow item-upimg margin-top-xs">
-				<image wx:if="{{pic}}" mode="widthFix" lazy-load="{{true}}" class="loading" src="{{pic}}" />
-				<view class="upimg-title content-cut-two">{{title||'演示标题'}}</view>
-				<view class="data-desc content-cut-two">{{desc||'简要描述未填写'}}</view>
-				<view class="data-status">
-					<text class="icon-remind margin-right-xxs"></text>{{status||'每天20点开放预约'}}
-				</view>
-			</view>
-			<!--上下图 END-->
 
 			<!--左大图 Begin-->
-			<view wx:if="{{mode=='leftbig'}}" class="item shadow item-leftbig {{!pic?'nopic':''}} margin-top-xs">
+			<view class="item shadow item-leftbig {{!pic?'nopic':''}} margin-top-xs">
 				<image wx:if="{{pic}}" mode="aspectFill" lazy-load="{{true}}" class="leftbig-left loading" src="{{pic}}">
 				</image>
 				<view class="leftbig-right">
@@ -58,7 +48,7 @@
 						<text class="content-cut-three">{{desc||'简要描述未填写'}}</text>
 					</view>
 					<view class="data"> 
-						<view class="meet-status"><text class="icon-remind margin-right-xxs"></text>{{status||'每天20点开放预约'}}</view>
+						<view class="meet-status"><text class="icon-remind margin-right-xxs"></text>{{status||'9天可预约'}}</view>
 					</view>
 
 				</view>
@@ -66,21 +56,6 @@
 
 			</view>
 			<!--左大图 END-->
-
-			<!--大文字 Begin-->
-			<view wx:if="{{mode=='bigtext'}}" class="item shadow item-bigtext bg-white">
-				<view class="left">
-					<image wx:if="{{pic}}" mode="aspectFill" lazy-load="{{true}}" class="loading" src="{{pic}}" />
-				</view>
-				<view class="right">
-					<view class="bigtext-title content-cut-one">{{title||'演示标题'}}</view>
-					<view class="data-desc content-cut-one">{{desc||'简要描述未填写'}}</view>
-				</view>
-				<view class="data-status">
-					<text class="icon-remind margin-right-xxs"></text>{{status||'每天20点开放预约'}}
-				</view>
-			</view>
-			<!--大文字 END-->
 
 		</view>
 

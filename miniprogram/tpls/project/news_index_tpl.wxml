@@ -9,6 +9,11 @@
 		<import src="../../tpls/public/base_list_tpl.wxml" />
 		<template is="baseListTpl" data="{{dataList:dataList.list,listMode}}" />
 		<!-- List END -->
+
+		<!--load begin-->
+		<import src="../public/list_load_tpl.wxml" />
+		<template is="listLoadTpl" data="{{skin:'load-project',dataList}}" />
+		<!--load end-->
 	</cmpt-comm-list>
 
 	<block wx:if="{{skin.IS_SUB&&curMenu}}">

@@ -298,7 +298,12 @@
  		for (let k in arr) {
  			let node = arr[k].split('=');
  			arr[k] = {};
- 			arr[k].label = node[1];
+
+ 			let labelArr = node[1].split('|');
+ 			arr[k].label = labelArr[0];
+ 			if (labelArr.length > 1) { //扩展属性
+ 				arr[k].ext = labelArr[1];
+ 			}
  			arr[k].val = node[0];
  		}
  		return arr;

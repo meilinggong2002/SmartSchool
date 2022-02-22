@@ -34,12 +34,10 @@
 						<view class="title text-admin">状态</view>
 						<view class="mao">：</view>
 						<view class="content">
-							<view wx:if="{{item.JOIN_STATUS==0}}" class="text-red">预约待审核</view>
-							<view wx:elif="{{item.JOIN_STATUS==1}}" class="text-black"><text class="icon-roundcheck margin-right-xxs"></text>预约成功
+							<view wx:if="{{item.JOIN_STATUS==1}}" class="text-black"><text class="icon-roundcheck margin-right-xxs"></text>预约成功
 								<text wx:if="{{item.JOIN_IS_CHECKIN==1}}">，已签到</text>
 								<text class="text-grey" wx:else>，未签到</text>
 							</view>
-							<view wx:elif="{{item.JOIN_STATUS==8}}">审核不通过</view>
 							<view wx:elif="{{item.JOIN_STATUS==10}}">用户取消</view>
 							<view wx:elif="{{item.JOIN_STATUS==99}}">系统取消</view>
 						</view>
@@ -81,16 +79,6 @@
 
 						<block wx:if="{{item.JOIN_STATUS==1}}">
 							<view bindtap="bindCancelTap" data-idx="{{index}}" data-status="99" data-old="{{item.JOIN_STATUS}}" class="btn bg-grey light  margin-right-s">取消预约</view>
-						</block>
-
-						<block wx:if="{{item.JOIN_STATUS==0}}">
-							<view bindtap="bindStatusTap" data-idx="{{index}}" data-status="1" data-old="{{item.JOIN_STATUS}}" class="btn bg-green light margin-right-s"><text class="icon-check margin-right-xxs"></text>审核通过</view>
-
-							<view bindtap="bindRefuseTap" data-idx="{{index}}" data-status="8" data-old="{{item.JOIN_STATUS}}" class="btn bg-red light margin-right-s"><text class="icon-close margin-right-xxs"></text>审核不通过</view>
-						</block>
-
-						<block wx:if="{{item.JOIN_STATUS==8}}">
-							<view bindtap="bindStatusTap" data-idx="{{index}}" data-status="1" data-old="{{item.JOIN_STATUS}}" class="btn bg-green light margin-right-s"><text class="icon-check margin-right-xxs"></text>审核通过</view>
 						</block>
 
 						<block wx:if="{{item.JOIN_STATUS==10 || item.JOIN_STATUS==99}}">

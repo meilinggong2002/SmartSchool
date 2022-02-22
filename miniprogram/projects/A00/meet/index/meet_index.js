@@ -10,7 +10,6 @@ Page({
 			skin,
 			that: this,
 			isLoadSkin: true,
-			tabIndex: -1, 
 			isModifyNavColor: true
 		}); 
 

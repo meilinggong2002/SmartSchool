@@ -20,15 +20,15 @@
 
 		<!--down area begin-->
 		<view class="down padding-project">
-			<view class="comm-list menu card-project shadow-project">
+			<view class="comm-list menu today-card card-project shadow-project">
 				<view class="today">
-					<view class="title">我的今日活动/预约</view>
+					<view class="title">我的今日{{skin.MEET_NAME}}</view>
 					<view class="list">
 						<view class="item" wx:if="{{myTodayList===null}}">
 							<view class="load loading text-s text-project" style="line-height:1!important"></view>
 						</view>
 						<view wx:elif="{{myTodayList.length==0}}" class="item">
-							<view class="text-normal text-grey" style="line-height:1!important">您今天没有活动/预约哦~ </view>
+							<view class="text-normal text-grey" style="line-height:1!important">您今天没有{{skin.MEET_NAME}}哦~ </view>
 						</view>
 						<view class="item" bindtap="url" data-url="../join_detail/my_join_detail?id={{item._id}}" wx:for="{{myTodayList}}" wx:key="key">
 							<view class="time">
@@ -53,7 +53,7 @@
 				<view class="item arrow" bindtap="url" data-url="../join/my_join">
 					<view class="content">
 						<text class="icon-activityfill my-icon-project text-project"></text>
-						<text class="text-black">我的所有活动/预约</text>
+						<text class="text-black">我的所有{{skin.MEET_NAME}}</text>
 					</view>
 				</view>
 				<view class="item arrow" bindtap="url" data-url="../edit/my_edit">

@@ -51,7 +51,7 @@
 			<view class="info-list-box margin-bottom-xxl">
 				<view class="item card-project shadow-project">
 					<view class="info margin-bottom-s">
-						<view class="center text-bold">活动/报名约信息</view>
+						<view class="center text-bold">预约信息</view>
 					</view>
 					<view class="info" wx:for="{{join.JOIN_FORMS}}" wx:key="key">
 						<view class="title">{{item.title}}：</view>

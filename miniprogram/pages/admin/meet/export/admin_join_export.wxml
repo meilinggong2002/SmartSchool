@@ -50,7 +50,7 @@
 		</block>
 	</view>
 
-	<button bindtap="bindExportTap" class="btn-admin margin-top">{{url?'重新生成报名数据':'生成报名数据'}} (Excel文件)</button> 
+	<button bindtap="bindExportTap" class="btn-admin margin-top">{{url?'重新生成名单数据':'生成名单数据'}} (Excel文件)</button> 
 
 	<button wx:if="{{url}}" bindtap="bindOpenTap" class="btn-admin bg-purple light">直接打开数据文件</button>   
 

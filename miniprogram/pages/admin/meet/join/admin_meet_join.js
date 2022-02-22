@@ -70,7 +70,7 @@ Page({
 				titleEn: options.title
 			});
 			wx.setNavigationBarTitle({
-				title: '时段预约名单 - ' + title
+				title: '分时段预约名单 - ' + title
 			});
 		}
 	},

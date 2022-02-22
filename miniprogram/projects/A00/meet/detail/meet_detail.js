@@ -8,7 +8,12 @@ Page({
 	onReady: function () {
 		PassortBiz.initPage({
 			skin,
-			that: this
+			that: this,
+			isLoadSkin: true,
+		});
+
+		wx.setNavigationBarTitle({
+			title: skin.MEET_NAME + '详情'
 		});
 	},
 })

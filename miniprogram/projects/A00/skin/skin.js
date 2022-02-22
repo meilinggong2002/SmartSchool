@@ -4,12 +4,12 @@ module.exports = {
 	NAV_COLOR: '#ffffff',
 	NAV_BG: '#11406C',
 
-	MEET_LIST_MODE: 'leftbig', //bigtext,leftbig,leftbig2,leftbig3,leftpic,rightpic,upimg
-
+	MEET_NAME: '活动/预约', 
+ 
 	MENU_ITEM: ['首页', '预约', '我的'], // 第1,4,5菜单
 
 	NEWS_CATE: '1=学校概况,2=校园资讯,3=校园风光,4=德育工作,5=教师园地,6=学生天地,7=校友情深',
-	MEET_TYPE: '1=来访预约,2=校园活动',
+	MEET_TYPE: '1=来访预约|leftbig2,2=校园活动|leftbig3',
 
 	DEFAULT_FORMS: [{
 			type: 'line',

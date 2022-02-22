@@ -8,7 +8,8 @@ Page({
 	onReady: function () {
 		PassortBiz.initPage({
 			skin,
-			that: this
+			that: this,
+			isLoadSkin: true,
 		});
 	}, 
 })

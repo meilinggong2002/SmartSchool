@@ -16,9 +16,6 @@ module.exports = Behavior({
 		 * 生命周期函数--监听页面加载
 		 */
 		onLoad: function (options) {
-
-			//设置搜索菜单
-			this.setData(this.getSearchMenu());
 		},
 
 		/**
@@ -79,7 +76,11 @@ module.exports = Behavior({
 		},
 
 		/** 搜索菜单设置 */
-		getSearchMenu: function () {
+		getSearchMenu: function (skin, that) {
+
+			wx.setNavigationBarTitle({
+				title: '我的' + skin.MEET_NAME
+			});
 
 			let sortItem1 = [{
 				label: '排序',
@@ -109,7 +110,7 @@ module.exports = Behavior({
 					type: 'tomorrow',
 					value: ''
 				}, {
-					label: '已报名/预约',
+					label: '已预约',
 					type: 'succ',
 					value: ''
 				},
@@ -120,10 +121,10 @@ module.exports = Behavior({
 				}
 			]
 
-			return {
+			that.setData({
 				sortItems,
 				sortMenus
-			}
+			});
 
 		},
 		bindCancelTap: async function (e) {

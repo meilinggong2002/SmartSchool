@@ -44,7 +44,7 @@ class AdminSetupService extends BaseAdminService {
 		let result = await cloud.openapi.wxacode.getUnlimited({
 			scene: 'qr',
 			width: 280,
-		//	check_path: false,
+			check_path: false,
 			env_version: 'release', //trial,develop
 			page
 		});

@@ -74,7 +74,7 @@ module.exports = Behavior({
 		/**
 		 * 生命周期函数--监听页面显示
 		 */
-		onShow: function () {
+		onShow: async function () {
 			this.setData({
 				day: timeHelper.time('Y-M-D')
 			}, async () => {

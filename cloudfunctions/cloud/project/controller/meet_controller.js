@@ -109,7 +109,7 @@ class MeetController extends BaseController {
 		let list = result.list;
 
 		for (let k in list) {
-			list[k].openRule = this._getLeaveDay(list[k].MEET_DAYS) + '天可约';
+			list[k].openRule = this._getLeaveDay(list[k].MEET_DAYS) + '天可预约';
 		}
 
 		result.list = this.transMeetList(list);

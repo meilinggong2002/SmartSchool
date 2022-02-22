@@ -96,7 +96,7 @@ Page({
 	},
 
 	bindOpenTap:function(e) {
-		fileHelper.openDoc('报名名单', this.data.url);
+		fileHelper.openDoc('预约名单', this.data.url);
 	},
 
 	url: async function (e) {

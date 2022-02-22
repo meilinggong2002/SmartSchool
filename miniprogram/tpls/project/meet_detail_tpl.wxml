@@ -7,8 +7,8 @@
 		<view class="top-area">
 			<view class="top-title text-cut">{{meet.MEET_TITLE}}</view>
 			<view class="top-menu">
-				<view bindtap="bindShowMindTap" class="item {{showMind?'cur text-project':''}}"><text class="icon-friend margin-right-xxs"></text>活动/预约须知</view>
-				<view bindtap="bindShowTimeTap" class="item {{showTime?'cur text-project':''}}"><text class="icon-remind margin-right-xxs"></text>可报名/预约时段</view>
+				<view bindtap="bindShowMindTap" class="item {{showMind?'cur text-project':''}}"><text class="icon-friend margin-right-xxs"></text>{{skin.MEET_NAME}}须知</view>
+				<view bindtap="bindShowTimeTap" class="item {{showTime?'cur text-project':''}}"><text class="icon-remind margin-right-xxs"></text>可预约时段</view>
 			</view>
 		</view>
 
@@ -34,7 +34,7 @@
 			<block wx:if="{{showTime}}">
 				<view wx:if="{{!meet.MEET_DAYS_SET || meet.MEET_DAYS_SET.length == 0}}" class="meet-no-time text-grey">
 					<text class="icon-emoji"></text>
-					<view>暂无可预约的时段，请选择其他</view>
+					<view>暂无可预约时段，请选择其他</view>
 				</view>
 
 				<view wx:if="{{meet.MEET_DAYS_SET && meet.MEET_DAYS_SET.length > 0}}" class="vertical-box">

@@ -69,7 +69,7 @@ page {
 .meet-list-box .item.card-project,
 .form-box.card-project,
 .bar .search-form {
-	border-radius: 20rpx;
+	border-radius: 10rpx!important;
 }
 
 .up-project {
@@ -89,4 +89,8 @@ page {
 .main .comm-list .item.arrow::before,
 .my-icon-project {
 	color: var(--projectColor) !important;
+}
+
+.meet-list-box {  
+	padding: 20rpx 30rpx 30rpx 30rpx; 
 }

@@ -5,7 +5,7 @@
 		</view>
 		<!-- List Begin -->
 		<import src="../../tpls/public/base_list_tpl.wxml" />
-		<template is="baseListTpl" data="{{dataList:dataList.list,listMode}}" />
+		<template is="baseListTpl" data="{{skin,dataList:dataList.list,listMode}}" />
 		<!-- List END -->
  
 		<!--load begin-->

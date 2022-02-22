@@ -8,7 +8,10 @@ Page({
 	onReady: function () {
 		PassortBiz.initPage({
 			skin,
-			that: this
+			that: this,
+			isLoadSkin: true,
 		});
+
+		this.getSearchMenu(skin, this);
 	},
 })

@@ -33,7 +33,6 @@ Page({
 		let title = parent.data.formTitle;
 		let status = parent.data.beginSetDesc;
 		this.setData({
-			mode: skin.MEET_LIST_MODE,
 			title,
 			status,
 			...formStyleSet

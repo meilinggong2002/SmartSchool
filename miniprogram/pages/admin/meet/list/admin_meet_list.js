@@ -247,7 +247,7 @@ Page({
 				value: 1
 			},
 			{
-				label: '停止预约',
+				label: '已停止',
 				type: 'status',
 				value: 9
 			},

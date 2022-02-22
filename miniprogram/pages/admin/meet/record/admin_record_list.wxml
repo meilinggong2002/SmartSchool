@@ -30,7 +30,7 @@
 				<!-- 表格头 start -->
 				<view class="thead border">
 					<view class="td" style="width:220rpx;">时段</view>
-					<view class="td" style="width:230rpx;">报名/名额</view>
+					<view class="td" style="width:230rpx;">已预约/名额</view>
 					<view class="td" style="width:150rpx;">取消</view>
 					<view class="td full">查看</view>
 				</view>

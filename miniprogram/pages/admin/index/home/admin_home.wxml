@@ -19,10 +19,10 @@
 
 
 	<view class="comm-list grid col-4">
-		<view class="item" bindtap="url" data-url="../../meet/list/admin_meet_list">{{data.meetCnt||0}}<text class="text-black">预约/活动</text></view>
-		<view class="item" bindtap="url" data-url="../../info/admin_info_list">{{data.joinCnt||0}}<text class="text-black">预约记录</text></view>
-		<view class="item" bindtap="url" data-url="../../user/list/admin_user_list">{{data.userCnt||0}}<text class="text-black">用户</text></view>
-		<view class="item" bindtap="url" data-url="../../news/list/admin_news_list">{{data.newsCnt||0}}<text class="text-black">内容管理</text></view>
+		<view class="item" bindtap="url" data-url="../../meet/list/admin_meet_list">{{data.meetCnt||'...'}}<text class="text-black">活动/预约数</text></view>
+		<view class="item" bindtap="url" data-url="../../info/admin_info_list">{{data.joinCnt||'...'}}<text class="text-black">预约数</text></view>
+		<view class="item" bindtap="url" data-url="../../user/list/admin_user_list">{{data.userCnt||'...'}}<text class="text-black">用户</text></view>
+		<view class="item" bindtap="url" data-url="../../news/list/admin_news_list">{{data.newsCnt||'...'}}<text class="text-black">文章数</text></view>
 
 	</view>
 
@@ -33,7 +33,7 @@
 	</view>
 
 	<view class="comm-list grid col-3">
-		<view class="item" bindtap="url" data-url="../../meet/list/admin_meet_list"> <text class="icon-activityfill text-blue"></text> <text class="text-black">预约/活动管理</text>
+		<view class="item" bindtap="url" data-url="../../meet/list/admin_meet_list"> <text class="icon-activityfill text-blue"></text> <text class="text-black">活动/预约管理</text>
 		</view>
 		<view class="item" bindtap="url" data-url="../../user/list/admin_user_list"> <text class="icon-peoplefill text-green"></text> <text class="text-black">用户管理</text>
 		</view>

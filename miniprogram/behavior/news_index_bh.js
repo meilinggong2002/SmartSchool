@@ -23,8 +23,7 @@ module.exports = Behavior({
 						cateId: options.id,
 					}
 				});
-			}
-			else {
+			} else {
 				this.setData({
 					_params: {
 						cateId: 0,
@@ -105,7 +104,18 @@ module.exports = Behavior({
 				if (cateList[k].val == cateId) {
 					wx.setNavigationBarTitle({
 						title: cateList[k].label
-					})
+					});
+
+					if (cateList[k].ext) { //样式
+						this.setData({
+							listMode: cateList[k].ext
+						});
+					} else {
+						this.setData({
+							listMode: 'leftpic'
+						});
+					}
+
 				}
 			}
 			return '';

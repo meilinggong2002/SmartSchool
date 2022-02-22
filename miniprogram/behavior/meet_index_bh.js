@@ -71,6 +71,10 @@ module.exports = Behavior({
 
 		_setTypeTitle: function (skin, typeId = null) {
 
+			wx.setNavigationBarTitle({
+				title: skin.MEET_NAME
+			});
+
 			// 获取当前小程序的页面栈
 			let pages = getCurrentPages();
 			// 数组中索引最大的页面--当前页面
@@ -84,7 +88,17 @@ module.exports = Behavior({
 				if (typeList[k].val == typeId) {
 					wx.setNavigationBarTitle({
 						title: typeList[k].label
-					})
+					});
+
+					if (typeList[k].ext) { //样式
+						this.setData({
+							listMode: typeList[k].ext
+						});
+					} else {
+						this.setData({
+							listMode: 'rightpic'
+						});
+					}
 				}
 			}
 			return '';

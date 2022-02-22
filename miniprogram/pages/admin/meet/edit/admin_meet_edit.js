@@ -35,7 +35,7 @@ Page({
 		let id = this.data.id;
 		if (!id) return;
 
-		pageHelper.formSetBarTitleByAddEdit(id, '后台-预约');
+		pageHelper.formSetBarTitleByAddEdit(id, '后台-活动/预约');
 
 		let params = {
 			id
